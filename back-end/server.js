@@ -1,22 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cors = require('cors');
-const carsRoutes = require('./routes/cars');
+const carRoutes = require('./routes/cars');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
+app.use(express.json());
 app.use(cors());
-app.use(bodyParser.json());
 
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => console.log('MongoDB Connected'))
-  .catch(err => console.error(err));
+// Routes
+app.use('/api/cars', carRoutes);
 
-app.use('/cars', carsRoutes);
+// MongoDB connection
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(err));
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(5000, () => {
+    console.log('Server running on port 5000');
+});

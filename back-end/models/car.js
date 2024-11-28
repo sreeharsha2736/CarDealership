@@ -8,7 +8,8 @@ const carSchema = new mongoose.Schema({
     kms: Number,
     vin: String,
     price: Number,
-    images: [String],
+    images: [String],  // Array for multiple images
 });
 
-module.exports = mongoose.model('Car', carSchema);
+const Car = mongoose.model('Car', carSchema);
+module.exports = Car;
