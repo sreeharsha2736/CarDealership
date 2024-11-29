@@ -1,12 +1,20 @@
 import React from 'react';
 
-function About() {
+const About = () => {
   return (
-    <div className="container mx-auto py-16 text-center">
-      <h2 className="text-3xl font-semibold mb-6">About Us</h2>
-      <p className="text-lg text-gray-600">We are a trusted car dealership offering the best deals on new and used cars. Our goal is to provide quality service and excellent vehicles to our customers.</p>
+    <div className="p-10 bg-gray-100 min-h-screen">
+      <h1 className="text-4xl font-bold text-blue-600">About Us</h1>
+      <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+        Our car dealership has been serving customers for over a decade, offering the best
+        selection of new and pre-owned vehicles. We pride ourselves on our exceptional
+        customer service and unbeatable prices.
+      </p>
+      <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+        Whether you're looking for a luxury vehicle, a reliable family car, or a budget-friendly
+        option, we have something for everyone.
+      </p>
     </div>
   );
-}
+};
 
 export default About;

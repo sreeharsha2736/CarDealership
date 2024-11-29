@@ -1,27 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
 import Inventory from './components/Inventory';
+import CarDetails from './components/CarDetails';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Navigation />
-      <div className="container mx-auto my-8">
+      <div>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<ContactUs />} />
           <Route path="/inventory" element={<Inventory />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/car-details/:id" element={<CarDetails />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
-}
+};
 
 export default App;
