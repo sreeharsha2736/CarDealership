@@ -1,6 +1,4 @@
-// src/components/Filters.js
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Filters = ({ onFilterChange }) => {
   const [filters, setFilters] = useState({
@@ -14,49 +12,72 @@ const Filters = ({ onFilterChange }) => {
     maxKms: 200000,
   });
 
-  const handleChange = (e) => {
-    setFilters({ ...filters, [e.target.name]: e.target.value });
+  const makeModelMap = {
+    Toyota: ['Corolla', 'Camry', 'RAV4', 'Highlander'],
+    Honda: ['Civic', 'Accord', 'CR-V', 'Pilot'],
+    Ford: ['Mustang', 'Explorer', 'Focus', 'F-150'],
+    BMW: ['X5', 'X3', '3 Series', '5 Series'],
+  };
+
+  const makes = Object.keys(makeModelMap);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setFilters((prev) => ({
+      ...prev,
+      [name]: value,
+      ...(name === 'make' ? { model: '' } : {}), // Reset model if make is changed
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onFilterChange(filters);  // Pass filters back to parent component
+    onFilterChange(filters); // Pass filters back to parent component
   };
 
   return (
     <form className="p-6 bg-white rounded-lg shadow-lg space-y-6" onSubmit={handleSubmit}>
       <h3 className="text-2xl font-semibold text-gray-800 mb-4">Filters</h3>
-      
-      {/* Make Input */}
+
+      {/* Make Dropdown */}
       <div>
-        <label htmlFor="make" className="block text-sm font-medium text-gray-600 mb-2">
-          Make
-        </label>
-        <input
-          type="text"
+        <label className="block text-sm font-medium text-gray-600 mb-2">Make</label>
+        <select
           name="make"
-          id="make"
-          placeholder="Enter car make"
           value={filters.make}
-          onChange={handleChange}
-          className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-        />
+          onChange={handleInputChange}
+          className="w-full px-4 py-2 border rounded-md text-gray-700"
+        >
+          <option value="">Please select a make</option>
+          {makes.map((make) => (
+            <option key={make} value={make}>
+              {make}
+            </option>
+          ))}
+        </select>
       </div>
 
-      {/* Model Input */}
+      {/* Model Dropdown */}
       <div>
-        <label htmlFor="model" className="block text-sm font-medium text-gray-600 mb-2">
-          Model
-        </label>
-        <input
-          type="text"
+        <label className="block text-sm font-medium text-gray-600 mb-2">Model</label>
+        <select
           name="model"
-          id="model"
-          placeholder="Enter car model"
           value={filters.model}
-          onChange={handleChange}
-          className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-        />
+          onChange={handleInputChange}
+          className="w-full px-4 py-2 border rounded-md text-gray-700"
+          disabled={!filters.make}
+        >
+          <option value="">
+            {filters.make ? 'Please select a model' : 'Please select a make first'}
+          </option>
+          {filters.make &&
+            makeModelMap[filters.make].map((model) => (
+              <option key={model} value={model}>
+                {model}
+              </option>
+            ))}
+        </select>
       </div>
 
       {/* Price Range Slider */}
@@ -66,22 +87,22 @@ const Filters = ({ onFilterChange }) => {
         </label>
         <div className="flex items-center justify-between">
           <input
-            type="range"
+            type="number"
             name="minPrice"
             min="0"
             max="100000"
             value={filters.minPrice}
-            onChange={handleChange}
-            className="w-full"
+            onChange={handleInputChange}
+            className="w-full mr-2 px-2 py-1 border rounded-md"
           />
           <input
-            type="range"
+            type="number"
             name="maxPrice"
             min="0"
             max="100000"
             value={filters.maxPrice}
-            onChange={handleChange}
-            className="w-full"
+            onChange={handleInputChange}
+            className="w-full ml-2 px-2 py-1 border rounded-md"
           />
         </div>
       </div>
@@ -93,22 +114,22 @@ const Filters = ({ onFilterChange }) => {
         </label>
         <div className="flex items-center justify-between">
           <input
-            type="range"
+            type="number"
             name="minYear"
             min="2000"
             max="2025"
             value={filters.minYear}
-            onChange={handleChange}
-            className="w-full"
+            onChange={handleInputChange}
+            className="w-full mr-2 px-2 py-1 border rounded-md"
           />
           <input
-            type="range"
+            type="number"
             name="maxYear"
             min="2000"
             max="2025"
             value={filters.maxYear}
-            onChange={handleChange}
-            className="w-full"
+            onChange={handleInputChange}
+            className="w-full ml-2 px-2 py-1 border rounded-md"
           />
         </div>
       </div>
@@ -120,22 +141,22 @@ const Filters = ({ onFilterChange }) => {
         </label>
         <div className="flex items-center justify-between">
           <input
-            type="range"
+            type="number"
             name="minKms"
             min="0"
             max="200000"
             value={filters.minKms}
-            onChange={handleChange}
-            className="w-full"
+            onChange={handleInputChange}
+            className="w-full mr-2 px-2 py-1 border rounded-md"
           />
           <input
-            type="range"
+            type="number"
             name="maxKms"
             min="0"
             max="200000"
             value={filters.maxKms}
-            onChange={handleChange}
-            className="w-full"
+            onChange={handleInputChange}
+            className="w-full ml-2 px-2 py-1 border rounded-md"
           />
         </div>
       </div>

@@ -27,32 +27,22 @@ const getFilteredCars = async (req, res) => {
     const filterCriteria = {};
 
     // Build the filter object dynamically based on query parameters
-    if (make) {
-      filterCriteria.make = { $in: make.split(',') }; // Split comma-separated makes into an array
-    }
-    if (model) {
-      filterCriteria.model = { $in: model.split(',') }; // Split comma-separated models into an array
-    }
-    if (minPrice) {
-      filterCriteria.price = { $gte: minPrice };
-    }
+    if (make) filterCriteria.make = { $in: make.split(',') };
+    if (model) filterCriteria.model = { $in: model.split(',') };
+    if (minPrice) filterCriteria.price = { $gte: parseInt(minPrice, 10) };
     if (maxPrice) {
       filterCriteria.price = filterCriteria.price || {};
-      filterCriteria.price.$lte = maxPrice;
+      filterCriteria.price.$lte = parseInt(maxPrice, 10);
     }
-    if (minKms) {
-      filterCriteria.kms = { $gte: minKms };
-    }
+    if (minKms) filterCriteria.kms = { $gte: parseInt(minKms, 10) };
     if (maxKms) {
       filterCriteria.kms = filterCriteria.kms || {};
-      filterCriteria.kms.$lte = maxKms;
+      filterCriteria.kms.$lte = parseInt(maxKms, 10);
     }
-    if (minYear) {
-      filterCriteria.year = { $gte: minYear };
-    }
+    if (minYear) filterCriteria.year = { $gte: parseInt(minYear, 10) };
     if (maxYear) {
       filterCriteria.year = filterCriteria.year || {};
-      filterCriteria.year.$lte = maxYear;
+      filterCriteria.year.$lte = parseInt(maxYear, 10);
     }
 
     // Query the cars collection with the filter criteria
@@ -63,20 +53,15 @@ const getFilteredCars = async (req, res) => {
   }
 };
 
-// Get car details by VIN
-const getCarDetails = async (req, res) => {
+// Get distinct makes and models for filters
+const getCarMakesAndModels = async (req, res) => {
   try {
-    const { vin } = req.params;
-    const car = await Car.findOne({ vin });
-
-    if (!car) {
-      return res.status(404).json({ message: 'Car not found' });
-    }
-
-    res.json(car);
+    const makes = await Car.distinct('make');
+    const models = await Car.distinct('model');
+    res.json({ makes, models });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
 
-module.exports = { getAllCars, getFilteredCars, getCarDetails };
+module.exports = { getAllCars, getFilteredCars, getCarMakesAndModels };

@@ -1,5 +1,3 @@
-// src/pages/Inventory.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Filters from '../components/Filters';
@@ -8,14 +6,25 @@ import CarCard from '../components/CarCard';
 const Inventory = () => {
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState({
+    make: [],
+    model: [],
+    minPrice: 0,
+    maxPrice: 100000,
+    minYear: 2000,
+    maxYear: 2025,
+    minKms: 0,
+    maxKms: 200000,
+  });
+  const [currentPage, setCurrentPage] = useState(1);
+  const carsPerPage = 16;
 
   // Fetch all cars from the database
   const fetchCars = async () => {
     try {
       const response = await axios.get('http://localhost:5000/api/cars');
-      setCars(response.data);  // Store all cars
-      setFilteredCars(response.data);  // Initially, show all cars
+      setCars(response.data); // Store all cars
+      setFilteredCars(response.data); // Initially, show all cars
     } catch (error) {
       console.error('Error fetching cars:', error);
     }
@@ -24,17 +33,39 @@ const Inventory = () => {
   // Apply filters to the list of cars
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
-    // Filter the cars based on the applied filters
+
     const filtered = cars.filter((car) => {
-      return (
-        (newFilters.make === '' || car.make.toLowerCase().includes(newFilters.make.toLowerCase())) &&
-        (newFilters.model === '' || car.model.toLowerCase().includes(newFilters.model.toLowerCase())) &&
-        car.price >= newFilters.minPrice && car.price <= newFilters.maxPrice &&
-        car.year >= newFilters.minYear && car.year <= newFilters.maxYear &&
-        car.kms >= newFilters.minKms && car.kms <= newFilters.maxKms
-      );
+      const matchesMake =
+        newFilters.make.length === 0 || newFilters.make.includes(car.make);
+      const matchesModel =
+        newFilters.model.length === 0 || newFilters.model.includes(car.model);
+      const matchesPrice =
+        car.price >= newFilters.minPrice && car.price <= newFilters.maxPrice;
+      const matchesYear =
+        car.year >= newFilters.minYear && car.year <= newFilters.maxYear;
+      const matchesKms =
+        car.kms >= newFilters.minKms && car.kms <= newFilters.maxKms;
+
+      return matchesMake && matchesModel && matchesPrice && matchesYear && matchesKms;
     });
+
     setFilteredCars(filtered);
+    setCurrentPage(1); // Reset to the first page
+  };
+
+  // Pagination logic
+  const indexOfLastCar = currentPage * carsPerPage;
+  const indexOfFirstCar = indexOfLastCar - carsPerPage;
+  const currentCars = filteredCars.slice(indexOfFirstCar, indexOfLastCar);
+
+  const totalPages = Math.ceil(filteredCars.length / carsPerPage);
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
   // Initial fetch of cars
@@ -50,12 +81,35 @@ const Inventory = () => {
       </div>
 
       {/* Cars Display Section */}
-      <div className="w-3/4 grid grid-cols-4 gap-8">
-        {filteredCars.length === 0 ? (
-          <p className="text-center text-gray-500">No cars found with the selected filters.</p>
-        ) : (
-          filteredCars.map((car) => <CarCard key={car.vin} car={car} />)
-        )}
+      <div className="w-3/4">
+        <div className="grid grid-cols-4 gap-6">
+          {currentCars.length === 0 ? (
+            <p className="text-center text-gray-500">No cars found with the selected filters.</p>
+          ) : (
+            currentCars.map((car) => <CarCard key={car.vin} car={car} />)
+          )}
+        </div>
+
+        {/* Pagination Controls */}
+        <div className="flex justify-between items-center mt-6">
+          <button
+            onClick={goToPreviousPage}
+            disabled={currentPage === 1}
+            className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 disabled:opacity-50"
+          >
+            Previous
+          </button>
+          <span className="text-gray-700">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            onClick={goToNextPage}
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
