@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const Filters = ({ onFilterChange }) => {
   const [filters, setFilters] = useState({
     make: '',
     model: '',
-    minPrice: 0,
-    maxPrice: 100000,
-    minYear: 2000,
-    maxYear: 2025,
-    minKms: 0,
-    maxKms: 200000,
+    price: 100000, // Default price in the middle of range
+    year: 2025, // Default year in the middle of range
+    kms: 100000, // Default KMs in the middle of range
   });
 
   const makeModelMap = {
@@ -20,6 +17,13 @@ const Filters = ({ onFilterChange }) => {
   };
 
   const makes = Object.keys(makeModelMap);
+
+  const handleSliderChange = (name, value) => {
+    setFilters((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -80,85 +84,49 @@ const Filters = ({ onFilterChange }) => {
         </select>
       </div>
 
-      {/* Price Range Slider */}
+      {/* Single Price Slider */}
       <div>
-        <label htmlFor="price" className="block text-sm font-medium text-gray-600 mb-2">
-          Price Range (${filters.minPrice} - ${filters.maxPrice})
+        <label className="block text-sm font-medium text-gray-600 mb-2">
+          Price: Up to ${filters.price}
         </label>
-        <div className="flex items-center justify-between">
-          <input
-            type="number"
-            name="minPrice"
-            min="0"
-            max="100000"
-            value={filters.minPrice}
-            onChange={handleInputChange}
-            className="w-full mr-2 px-2 py-1 border rounded-md"
-          />
-          <input
-            type="number"
-            name="maxPrice"
-            min="0"
-            max="100000"
-            value={filters.maxPrice}
-            onChange={handleInputChange}
-            className="w-full ml-2 px-2 py-1 border rounded-md"
-          />
-        </div>
+        <input
+          type="range"
+          min="0"
+          max="100000"
+          value={filters.price}
+          onChange={(e) => handleSliderChange('price', parseInt(e.target.value))}
+          className="w-full"
+        />
       </div>
 
-      {/* Year Range Slider */}
+      {/* Single Year Slider */}
       <div>
-        <label htmlFor="year" className="block text-sm font-medium text-gray-600 mb-2">
-          Year Range ({filters.minYear} - {filters.maxYear})
+        <label className="block text-sm font-medium text-gray-600 mb-2">
+          Year: Up to {filters.year}
         </label>
-        <div className="flex items-center justify-between">
-          <input
-            type="number"
-            name="minYear"
-            min="2000"
-            max="2025"
-            value={filters.minYear}
-            onChange={handleInputChange}
-            className="w-full mr-2 px-2 py-1 border rounded-md"
-          />
-          <input
-            type="number"
-            name="maxYear"
-            min="2000"
-            max="2025"
-            value={filters.maxYear}
-            onChange={handleInputChange}
-            className="w-full ml-2 px-2 py-1 border rounded-md"
-          />
-        </div>
+        <input
+          type="range"
+          min="2000"
+          max="2025"
+          value={filters.year}
+          onChange={(e) => handleSliderChange('year', parseInt(e.target.value))}
+          className="w-full"
+        />
       </div>
 
-      {/* KMs Range Slider */}
+      {/* Single KMs Slider */}
       <div>
-        <label htmlFor="kms" className="block text-sm font-medium text-gray-600 mb-2">
-          KMs Range ({filters.minKms} - {filters.maxKms} km)
+        <label className="block text-sm font-medium text-gray-600 mb-2">
+          KMs: Up to {filters.kms} km
         </label>
-        <div className="flex items-center justify-between">
-          <input
-            type="number"
-            name="minKms"
-            min="0"
-            max="200000"
-            value={filters.minKms}
-            onChange={handleInputChange}
-            className="w-full mr-2 px-2 py-1 border rounded-md"
-          />
-          <input
-            type="number"
-            name="maxKms"
-            min="0"
-            max="200000"
-            value={filters.maxKms}
-            onChange={handleInputChange}
-            className="w-full ml-2 px-2 py-1 border rounded-md"
-          />
-        </div>
+        <input
+          type="range"
+          min="0"
+          max="100000"
+          value={filters.kms}
+          onChange={(e) => handleSliderChange('kms', parseInt(e.target.value))}
+          className="w-full"
+        />
       </div>
 
       <button

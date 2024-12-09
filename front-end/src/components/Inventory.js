@@ -7,14 +7,11 @@ const Inventory = () => {
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
   const [filters, setFilters] = useState({
-    make: [],
-    model: [],
-    minPrice: 0,
-    maxPrice: 100000,
-    minYear: 2000,
-    maxYear: 2025,
-    minKms: 0,
-    maxKms: 200000,
+    make: '',
+    model: '',
+    price: 50000,
+    year: 2012,
+    kms: 100000,
   });
   const [currentPage, setCurrentPage] = useState(1);
   const carsPerPage = 16;
@@ -35,16 +32,11 @@ const Inventory = () => {
     setFilters(newFilters);
 
     const filtered = cars.filter((car) => {
-      const matchesMake =
-        newFilters.make.length === 0 || newFilters.make.includes(car.make);
-      const matchesModel =
-        newFilters.model.length === 0 || newFilters.model.includes(car.model);
-      const matchesPrice =
-        car.price >= newFilters.minPrice && car.price <= newFilters.maxPrice;
-      const matchesYear =
-        car.year >= newFilters.minYear && car.year <= newFilters.maxYear;
-      const matchesKms =
-        car.kms >= newFilters.minKms && car.kms <= newFilters.maxKms;
+      const matchesMake = !newFilters.make || car.make === newFilters.make;
+      const matchesModel = !newFilters.model || car.model === newFilters.model;
+      const matchesPrice = car.price <= newFilters.price;
+      const matchesYear = car.year <= newFilters.year;
+      const matchesKms = car.kms <= newFilters.kms;
 
       return matchesMake && matchesModel && matchesPrice && matchesYear && matchesKms;
     });
