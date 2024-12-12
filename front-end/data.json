@@ -1,0 +1,422 @@
+[
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2019,
+      "color": "White",
+      "kms": 45000,
+      "vin": "1HGCM82633A123456",
+      "price": 17000,
+      "images": [
+        "https://s3.amazonaws.com/toyota.site.toyota-v5/tci-prod/toyota/media/build/cor/col/big/b25_bprbe_fl1_0040_a.png?ck=12092024091228",
+        "https://www.motortrend.com/uploads/sites/10/2017/09/2018-toyota-corolla-le-eco-sedan-angular-front.png",
+        "https://s3.amazonaws.com/toyota.site.toyota-v5/tci-prod/toyota/media/build/cor/col/big/b25_bprbe_fl1_0040_a.png?ck=12092024091228"
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2021,
+      "color": "Gray",
+      "kms": 30000,
+      "vin": "1HGCM82633A987654",
+      "price": 21000,
+      "images": [
+        "https://hips.hearstapps.com/hmg-prod/images/2025-toyota-camry-xse-awd-123-66993cc94cc40.jpg",
+        "https://hips.hearstapps.com/hmg-prod/images/2025-toyota-camry-xse-awd-123-66993cc94cc40.jpg",
+        "https://www.edmunds.com/assets/m/cs/blt91de99359f393dab/6621fc74528fc1ce1e558f25/2025_toyota_camry_front.jpg"
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "RAV4",
+      "year": 2020,
+      "color": "Blue",
+      "kms": 38000,
+      "vin": "1HGCM82633A456789",
+      "price": 25000,
+      "images": [
+        "https://vehicle-images.dealerinspire.com/e7b9-11000864/JTMRWRFV0RD272759/23f3922dc8a64ef1cf6faff9ae4720e1.jpg",
+        "https://vehicle-images.dealerinspire.com/stock-images/chrome/90bafa6e39f25643de65024620b44ffa.png",
+        "https://vehicle-images.dealerinspire.com/9151-11000864/4T3E6RFV6RU174711/0d7ccf986585f41e698f32543bb55cda.jpg"
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "Highlander",
+      "year": 2022,
+      "color": "Black",
+      "kms": 18000,
+      "vin": "1HGCM82633A234567",
+      "price": 36000,
+      "images": [
+        "https://media.ed.edmunds-media.com/toyota/grand-highlander/2024/oem/2024_toyota_grand-highlander_4dr-suv_platinum_fq_oem_1_815.jpg",
+        "https://media.ed.edmunds-media.com/toyota/grand-highlander/2024/izmo/2024_toyota_grand-highlander_4dr-suv_limited_pr_izmo_1_1280x855.jpg",
+        "https://media.ed.edmunds-media.com/toyota/grand-highlander/2024/izmo/2024_toyota_grand-highlander_4dr-suv_limited_fql_izmo_1_1280x855.jpg"
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "year": 2018,
+      "color": "Silver",
+      "kms": 55000,
+      "vin": "1HGCM82633A765432",
+      "price": 31000,
+      "images": [
+        "https://toyotacanada.scene7.com/is/image/toyotacanada/20_Tacoma_TRD_Off-Road_Cement_1?ts=1688694123022&$Media-Large$&dpr=off",
+        "https://www.usnews.com/object/image/00000193-1dda-dcec-adbb-fdda39eb0001/01-usnpx-2025toyotatacoma-angularfront-zd.JPG?update-time=1731372698765&size=responsive640",
+        "https://www.motortrend.com/uploads/2024/04/003-2024-toyota-tacoma-trd-pro-passenger-front-quarter.jpg"
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2020,
+      "color": "Red",
+      "kms": 27000,
+      "vin": "2HGCM82633A123456",
+      "price": 22000,
+      "images": [
+        "https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2025/civic-type-r/non-VLP/Family-Page/MY25-Civic-Type-R-non-VLP-family-card-2x-A.png",
+        "https://www.edmunds.com/assets/m/cs/blta273833cf330f69f/674f4da31add862567c33334/2025-honda-civic-f34.jpg",
+        "https://media.ed.edmunds-media.com/honda/civic/2025/oem/2025_honda_civic_sedan_si_fq_oem_2_1280x855.jpg"
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "year": 2022,
+      "color": "Black",
+      "kms": 15000,
+      "vin": "2HGCM82633A654321",
+      "price": 28000,
+      "images": [
+        "https://www.darcarshonda.com/static/dealer-18163/DARCARS-Honda-Accord-Trims-L1-LX-v2.jpg",
+        "https://www.darcarshonda.com/static/dealer-18163/DARCARS-Honda-Accord-Trims-L3-Sport-HYB-v2.jpg",
+        "https://www.darcarshonda.com/static/dealer-18163/DARCARS-Honda-Accord-Trims-L4-EX-L-HYB-v2.jpg"
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "CR-V",
+      "year": 2021,
+      "color": "White",
+      "kms": 20000,
+      "vin": "2HGCM82633A345678",
+      "price": 26000,
+      "images": [
+        "https://media.ed.edmunds-media.com/honda/cr-v/2025/oem/2025_honda_cr-v_4dr-suv_ex-l_fq_oem_1_815.jpg",
+        "https://media.ed.edmunds-media.com/honda/cr-v/2025/oem/2025_honda_cr-v_4dr-suv_sport-touring-hybrid_fq_oem_2_1280x855.jpg",
+        "https://media.ed.edmunds-media.com/honda/cr-v/2025/oem/2025_honda_cr-v_4dr-suv_sport-touring-hybrid_fq_oem_3_1280x855.jpg"
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "Pilot",
+      "year": 2019,
+      "color": "Gray",
+      "kms": 40000,
+      "vin": "2HGCM82633A234567",
+      "price": 35000,
+      "images": [
+        "https://vehicle-images.dealerinspire.com/f75e-18002946/5FNYG2H41SB021798/37cd19504127695b72fcde5ea3db1f9c.jpg",
+        "https://vehicle-images.dealerinspire.com/aa4b-18002946/5FNYG2H41SB021798/e2482f014a167b6c66b39d9ebb304756.jpg",
+        "https://vehicle-images.dealerinspire.com/694e-18002946/5FNYG2H41SB021798/5d9dbcf06f227079ee4b103b4a92b391.jpg"
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "Fit",
+      "year": 2020,
+      "color": "Blue",
+      "kms": 18000,
+      "vin": "2HGCM82633A789012",
+      "price": 19000,
+      "images": [
+        "https://dbhdyzvm8lm25.cloudfront.net/stills_0640_png/MY2020/14307/14307_st0640_118.png",
+        "https://dbhdyzvm8lm25.cloudfront.net/stills_0640_png/MY2020/14307/14307_st0640_037.png",
+        "https://dbhdyzvm8lm25.cloudfront.net/stills_0640_png/MY2020/14307/14307_st0640_116.png"
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 2021,
+      "color": "Yellow",
+      "kms": 12000,
+      "vin": "3HGCM82633A123456",
+      "price": 45000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a44590a1e3d8e88cb10/stills_0640_png/MY2022/50581/50581_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a44590a1e3d8e88cb10/stills_0640_png/MY2022/50581/50581_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a44590a1e3d8e88cb10/stills_0640_png/MY2022/50581/50581_st0640_118.png"
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Escape",
+      "year": 2020,
+      "color": "Green",
+      "kms": 30000,
+      "vin": "3HGCM82633A654321",
+      "price": 27000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e41500c1e3d8e88cb10/stills_0640_png/MY2024/54017/54017_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e41500c1e3d8e88cb10/stills_0640_png/MY2024/54017/54017_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e41500c1e3d8e88cb10/stills_0640_png/MY2024/54017/54017_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer",
+      "year": 2019,
+      "color": "Black",
+      "kms": 42000,
+      "vin": "3HGCM82633A234567",
+      "price": 38000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65847560c1e3d8e88cb10/stills_0640_png/MY2023/52677/52677_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65847560c1e3d8e88cb10/stills_0640_png/MY2023/52677/52677_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65847560c1e3d8e88cb10/stills_0640_png/MY2023/52677/52677_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Edge",
+      "year": 2022,
+      "color": "White",
+      "kms": 16000,
+      "vin": "3HGCM82633A987654",
+      "price": 32000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a41590b1e3d8e88cb10/stills_0640_png/MY2022/50080/50080_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a41590b1e3d8e88cb10/stills_0640_png/MY2022/50080/50080_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a41590b1e3d8e88cb10/stills_0640_png/MY2022/50080/50080_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Bronco",
+      "year": 2020,
+      "color": "Gray",
+      "kms": 28000,
+      "vin": "3HGCM82633A678901",
+      "price": 40000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e4150091e3d8e88cb10/stills_0640_png/MY2024/54012/54012_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e4150091e3d8e88cb10/stills_0640_png/MY2024/54012/54012_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e4150091e3d8e88cb10/stills_0640_png/MY2024/54012/54012_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2021,
+      "color": "Silver",
+      "kms": 22000,
+      "vin": "3HGCM82633A345678",
+      "price": 43000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a45520e1e3d8e88cb10/stills_0640_png/MY2022/50435/50435_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a45520e1e3d8e88cb10/stills_0640_png/MY2022/50435/50435_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a45520e1e3d8e88cb10/stills_0640_png/MY2022/50435/50435_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "year": 2020,
+      "color": "Red",
+      "kms": 16000,
+      "vin": "4HGCM82633A123456",
+      "price": 35000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594651081e3d8e88cb10/stills_0640_png/MY2024/53703/53703_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594651081e3d8e88cb10/stills_0640_png/MY2024/53703/53703_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594651081e3d8e88cb10/stills_0640_png/MY2024/53703/53703_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "year": 2021,
+      "color": "White",
+      "kms": 12000,
+      "vin": "4HGCM82633A654321",
+      "price": 26000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594551091e3d8e88cb10/stills_0640_png/MY2024/53402/53402_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594551091e3d8e88cb10/stills_0640_png/MY2024/53402/53402_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594551091e3d8e88cb10/stills_0640_png/MY2024/53402/53402_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "year": 2020,
+      "color": "Blue",
+      "kms": 25000,
+      "vin": "4HGCM82633A234567",
+      "price": 22000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65945510f1e3d8e88cb10/stills_0640_png/MY2024/53404/53404_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65945510f1e3d8e88cb10/stills_0640_png/MY2024/53404/53404_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65945510f1e3d8e88cb10/stills_0640_png/MY2024/53404/53404_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Traverse",
+      "year": 2019,
+      "color": "Gray",
+      "kms": 35000,
+      "vin": "4HGCM82633A345678",
+      "price": 27000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65f4051091e3d8e88cb10/stills_0640_png/MY2024/55102/55102_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65f4051091e3d8e88cb10/stills_0640_png/MY2024/55102/55102_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65f4051091e3d8e88cb10/stills_0640_png/MY2024/55102/55102_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "year": 2021,
+      "color": "Black",
+      "kms": 22000,
+      "vin": "4HGCM82633A987654",
+      "price": 45000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65b49560e1e3d8e88cb10/stills_0640_png/MY2023/51875/51875_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65b49560e1e3d8e88cb10/stills_0640_png/MY2023/51875/51875_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65b49560e1e3d8e88cb10/stills_0640_png/MY2023/51875/51875_st0640_119.png"
+      ]
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series",
+      "year": 2020,
+      "color": "Silver",
+      "kms": 20000,
+      "vin": "5HGCM82633A123456",
+      "price": 38000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6584357081e3d8e88cb10/stills_0640_png/MY2023/52263/52263_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6584357081e3d8e88cb10/stills_0640_png/MY2023/52263/52263_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6584357081e3d8e88cb10/stills_0640_png/MY2023/52263/52263_st0640_119.png"
+      ]
+    },
+    {
+      "make": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "Black",
+      "kms": 22000,
+      "vin": "5HGCM82633A654321",
+      "price": 55000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594553091e3d8e88cb10/stills_0640_png/MY2024/53422/53422_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594553091e3d8e88cb10/stills_0640_png/MY2024/53422/53422_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb6594553091e3d8e88cb10/stills_0640_png/MY2024/53422/53422_st0640_119.png"
+      ]
+    },
+    {
+      "make": "BMW",
+      "model": "M3",
+      "year": 2020,
+      "color": "Red",
+      "kms": 15000,
+      "vin": "5HGCM82633A234567",
+      "price": 65000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25f43560e1e3d8e88cb10/stills_0640_png/MY2022/15275/15275_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25f43560e1e3d8e88cb10/stills_0640_png/MY2022/15275/15275_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25f43560e1e3d8e88cb10/stills_0640_png/MY2022/15275/15275_st0640_119.png"
+      ]
+    },
+    {
+      "make": "BMW",
+      "model": "X3",
+      "year": 2021,
+      "color": "Blue",
+      "kms": 17000,
+      "vin": "5HGCM82633A987654",
+      "price": 47000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65b40570a1e3d8e88cb10/stills_0640_png/MY2023/51161/51161_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65b40570a1e3d8e88cb10/stills_0640_png/MY2023/51161/51161_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65b40570a1e3d8e88cb10/stills_0640_png/MY2023/51161/51161_st0640_119.png"
+      ]
+    },
+    {
+      "make": "BMW",
+      "model": "Z4",
+      "year": 2019,
+      "color": "Yellow",
+      "kms": 23000,
+      "vin": "5HGCM82633A345678",
+      "price": 55000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a42570e1e3d8e88cb10/stills_0640_png/MY2022/50365/50365_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a42570e1e3d8e88cb10/stills_0640_png/MY2022/50365/50365_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a42570e1e3d8e88cb10/stills_0640_png/MY2022/50365/50365_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Audi",
+      "model": "A4",
+      "year": 2021,
+      "color": "White",
+      "kms": 14000,
+      "vin": "6HGCM82633A123456",
+      "price": 42000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25f44570f1e3d8e88cb10/stills_0640_png/MY2022/15564/15564_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25f44570f1e3d8e88cb10/stills_0640_png/MY2022/15564/15564_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25f44570f1e3d8e88cb10/stills_0640_png/MY2022/15564/15564_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Audi",
+      "model": "Q7",
+      "year": 2020,
+      "color": "Gray",
+      "kms": 25000,
+      "vin": "6HGCM82633A234567",
+      "price": 51000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e4858081e3d8e88cb10/stills_0640_png/MY2025/54993/54993_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e4858081e3d8e88cb10/stills_0640_png/MY2025/54993/54993_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65e4858081e3d8e88cb10/stills_0640_png/MY2025/54993/54993_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Audi",
+      "model": "A6",
+      "year": 2022,
+      "color": "Blue",
+      "kms": 10000,
+      "vin": "6HGCM82633A345678",
+      "price": 46000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65945520e1e3d8e88cb10/stills_0640_png/MY2023/53435/53435_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65945520e1e3d8e88cb10/stills_0640_png/MY2023/53435/53435_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65945520e1e3d8e88cb10/stills_0640_png/MY2023/53435/53435_st0640_119.png"
+      ]
+    },
+    {
+      "make": "Audi",
+      "model": "Q5",
+      "year": 2021,
+      "color": "Silver",
+      "kms": 15000,
+      "vin": "6HGCM82633A987654",
+      "price": 49000,
+      "images": [
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a43550f1e3d8e88cb10/stills_0640_png/MY2022/50244/50244_st0640_116.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a43550f1e3d8e88cb10/stills_0640_png/MY2022/50244/50244_st0640_037.png",
+        "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a43550f1e3d8e88cb10/stills_0640_png/MY2022/50244/50244_st0640_119.png"
+      ]
+    }
+  ]

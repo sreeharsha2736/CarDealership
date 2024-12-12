@@ -66,19 +66,22 @@ const Inventory = () => {
   }, []);
 
   return (
-    <div className="flex space-x-8">
+    <div className="flex flex-col lg:flex-row gap-8 p-6">
       {/* Filters Section */}
-      <div className="w-1/4">
+      <div className="lg:w-1/4 bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-xl font-semibold text-blue-600 mb-6">Anything specific on your mind? </h2>
         <Filters onFilterChange={handleFilterChange} />
       </div>
 
       {/* Cars Display Section */}
-      <div className="w-3/4">
-        <div className="grid grid-cols-4 gap-6">
+      <div className="lg:w-3/4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {currentCars.length === 0 ? (
-            <p className="text-center text-gray-500">No cars found with the selected filters.</p>
+            <p className="text-center text-gray-500 col-span-full">No cars found with the selected filters.</p>
           ) : (
-            currentCars.map((car) => <CarCard key={car.vin} car={car} />)
+            currentCars.map((car) => (
+              <CarCard key={car.vin} car={car} />
+            ))
           )}
         </div>
 
@@ -87,17 +90,17 @@ const Inventory = () => {
           <button
             onClick={goToPreviousPage}
             disabled={currentPage === 1}
-            className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 disabled:opacity-50"
+            className="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition disabled:opacity-50"
           >
             Previous
           </button>
-          <span className="text-gray-700">
+          <span className="text-lg font-semibold text-gray-700">
             Page {currentPage} of {totalPages}
           </span>
           <button
             onClick={goToNextPage}
             disabled={currentPage === totalPages}
-            className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 disabled:opacity-50"
+            className="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition disabled:opacity-50"
           >
             Next
           </button>
